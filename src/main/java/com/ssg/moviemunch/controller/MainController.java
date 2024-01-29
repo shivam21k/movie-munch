@@ -13,12 +13,16 @@ import java.util.Map;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/home")
+@RequestMapping("/movies")
 public class MainController {
     @Autowired
     private MainService mainService;
-    @GetMapping(value = "/movies")
+    @GetMapping(value = "/all")
     public ResponseEntity<List<MovieModel>> allMovies(){
         return new ResponseEntity<List<MovieModel>>(mainService.getAllMovies(), HttpStatus.OK);
+    }
+    @GetMapping(value = "/{name}")
+    public ResponseEntity<List<MovieModel>> movieByName(@PathVariable("name") String seriesTitle ){
+        return new ResponseEntity<List<MovieModel>>(mainService.getMovieBySeriesTitle(seriesTitle), HttpStatus.OK);
     }
 }
