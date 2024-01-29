@@ -17,4 +17,7 @@ public class MainService {
     public List<MovieModel> getAllMovies(){
         return movieRepository.findAll();
     }
+    public List<MovieModel> getMovieBySeriesTitle(String seriesTitle){
+        return movieRepository.findMovieBySeriesTitle(seriesTitle);
+    }
 }

@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Map;
 import lombok.Data;
 
-@Document(collection = "SampleData")
+@Document(collection = "MovieCollection")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +16,7 @@ public class MovieModel {
     @Id
     private ObjectId id;
     private String posterLink;
-    private String title;
+    private String seriesTitle;
     private String releasedYear;
     private String certificate;
     private String runtime;
