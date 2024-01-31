@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMunch</title>
+    <script src="./scripts/index.js" defer></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js" type="module"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" type="module"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h2>Movie Munch</h2>
+            <p>search for a movie...</p>
+        </div>
+        <div id="form-body">
+            <!-- <form action="http://localhost:8080/movies/" method="GET">
+                <input name = "movie-name"><br>
+                <button type="submit">Submit</button>
+            </form> -->
+             
+            <input id="movieName" name = "movie-name" placeholder="what's on your mind..." size=20><br>
+            <button onclick = "makeRequest(movieName.value)" >Submit</button>            
+        </div>
+        <div id="movie-data"></div>
+    </div>
+</body>
+</html>
